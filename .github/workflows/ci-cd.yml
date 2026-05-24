@@ -83,7 +83,7 @@ jobs:
           IMAGE_TAG=ghcr.io/${{ env.REPO_LOWER }}:latest
           docker build -t $IMAGE_TAG .
           docker push $IMAGE_TAG
-    deploy-staging:
+  deploy-staging:
     needs: docker-build-push
     runs-on: ubuntu-latest
     steps:
